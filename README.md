@@ -19,9 +19,7 @@ pip install -r requirements.txt
     
 ## Usage
 
-The trained models are currently not publicly available due to German data protection law. 
-Sharing the models requires a research agreement and board approval. 
-Please contact sprinkart@uni-bonn.de for further information. 
+The trained models can be shared for research purposes. Please contact sprinkart@uni-bonn.de for further information. 
 
 Alternatively, you can also use this code to train your own EAT assessment pipeline.
 More information on training and inference see below.
