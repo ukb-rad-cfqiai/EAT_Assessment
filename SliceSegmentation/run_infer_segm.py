@@ -50,9 +50,6 @@ def main():
 
     args = parser.parse_args()
     
-    args.gtAvailable = True
-    args.plotResults = True
-    
     result_dict = {'ID':[],
                    'img':[],
                    'AV_x_pred':[],
