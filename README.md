@@ -95,7 +95,7 @@ Run the tissue segmentation using:
 cd SliceSegmentation
 python run_infer_segm.py --data_path /path/to/input --sliceExtractionRes /path/to/sliceExtractionResults --output_path /path/to/output
 ```
-Under ```--sliceExtractionRes``, you must provide the path to the *results_origSpacing.csv* file from slice extraction.
+Under ```--sliceExtractionRes```, you must provide the path to the *results_origSpacing.csv* file from slice extraction.
 See additional options, e.g. --plotResults, --gtAvailable (if you have manual annotations and want to compare it with predicted results), by running ``` --help ```.
 
 ## References 
