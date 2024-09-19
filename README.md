@@ -47,8 +47,9 @@ python run_training_rl-landmarks.py --files /path/to/dataset --output_dir_name t
 ```
 
 To see a list of all available parameters and options, use ``` --help ```.
-After each epoch, the model *latest.pt* is saved in the --output_dir_name directory. 
---val_files are not mandatory, but in case of training it allows to check the model's performance after each epoch. 
+After each epoch, the model *latest.pt* is saved in the ```--output_dir_name directory```. 
+
+```--val_files``` are not mandatory, but in case of training it allows to check the model's performance after each epoch. 
 If the validation is better compared to the previous epoch, a second model named *best.pt* is saved. 
 Training performance can be checked in Tensorboard.
 
@@ -59,7 +60,7 @@ After the model has been trained, you can use the inference script *run_inferenc
 cd SliceExtraction
 python run_inference_rl-landmarks.py --files /path/to/dataset --output_dir_name training_output_test --load model_path
 ```
-If you do not have ground truth landmarks use the '''--task play''' option. Otherwise, task is set to *eval* and performance is compared to ground truth landmark positions.
+If you do not have ground truth landmarks use the ```--task play``` option. Otherwise, task is set to *eval* and performance is compared to ground truth landmark positions.
 
 Results are saved in the directory specificed under *output_dir_name*.
 
@@ -77,7 +78,7 @@ cd SliceSegmentation
 python run_training_segm.py --data_path /path/to/input --output_path /path/to/output
 ```
 
-Therefore, manual segmentations of 2D epicardial adipose tissue at the AV-level have to be defined. This script supports ground truth segmentations saved as 'patID\_segm.nii.gz' in the same directory as the raw input nifti files. You can also save segmentations as '.seg.nrrd' (from 3D Slicer). Therefore, set --gtSegmIdentifier to '.seg.nrrd' and use --slicerSegmName to specify the segmentation name you used in 3D Slicer, e.g. 'AV_EAT':
+Therefore, manual segmentations of 2D epicardial adipose tissue at the AV-level have to be defined. This script supports ground truth segmentations saved as 'patID\_segm.nii.gz' in the same directory as the raw input nifti files. You can also save segmentations as '.seg.nrrd' (from 3D Slicer). Therefore, set ```--gtSegmIdentifier``` to '.seg.nrrd' and use ```--slicerSegmName``` to specify the segmentation name you used in 3D Slicer, e.g. 'AV_EAT':
 
 ```
 cd SliceSegmentation
@@ -96,7 +97,7 @@ cd SliceSegmentation
 python run_infer_segm.py --data_path /path/to/input --sliceExtractionRes /path/to/sliceExtractionResults --output_path /path/to/output
 ```
 Under ```--sliceExtractionRes```, you must provide the path to the *results_origSpacing.csv* file from slice extraction.
-See additional options, e.g. --plotResults, --gtAvailable (if you have manual annotations and want to compare it with predicted results), by running ``` --help ```.
+See additional options, e.g. ```--plotResults```, ```--gtAvailable``` (if you have manual annotations and want to compare it with predicted results), by running ```--help ```.
 
 ## References 
 If you use this code, please cite:
